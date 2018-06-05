@@ -6,11 +6,22 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    <script src="index.js"></script>
 </head>
 <body>
     <h1>SpellBook</h1>
+    <h1 id='book2'>Spellbook2!</h1>
+    <h1 id='book3'>Spellbook3 should change with form submit</h1>
     <button>Change Text</button>
-</body>
+    
+    <form action="javascript:;" onsubmit="updateSpellBook3(this)">
+      <div class="user input">
+        <label for="user_input">Form input</label>
+        <input type="text" id="user_input" name="input">
+      </div>
+      <div>
+        <button type="submit">Change Spellbook3!</button>
+      </div>
+    </form>
+    <script src="index.js"></script>
 </body>
 </html>
