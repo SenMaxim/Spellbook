@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
     <h1>SpellBook</h1>
-    <h1 id='book2'>Spellbook2!</h1>
-    <h1 id='book3'>Spellbook3 should change with form submit</h1>
-    <button>Change Text</button>
+    <h2 id='book2'>Book of Spells</h2>
     
-    <form action="javascript:;" onsubmit="updateSpellBook3(this)">
-      <div class="user input">
-        <label for="user_input">Form input</label>
-        <input type="text" id="user_input" name="input">
-      </div>
-      <div>
-        <button type="submit">Change Spellbook3!</button>
+    <form action="javascript:;" onsubmit="updateSpellBook(this)">
+
+      <div id="input_spells_div">
+        <label for="input_spells">Enter your own spells here</label>
+        <input type="text" id="input_spell" name="input_spells">
+        <label for="input_spells">Enter the effect here</label>
+        <input type="text" id="input_effect" name="input_effects">
+        <button type="submit">Submit your own spell!</button>
       </div>
     </form>
     <script src="index.js"></script>

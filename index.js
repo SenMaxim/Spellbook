@@ -1,13 +1,29 @@
-const header1 = document.querySelector('h1')
-const header2 = document.getElementById('book2')
-const header3 = document.getElementById('book3')
-const button = document.querySelector('button')
+const inputSpellsDiv = document.getElementById("input_spells_div");
+const spellList = document.createElement('ul');
 
-button.addEventListener('click', function() {
-    console.log('event handled')
-  header2.textContent = 'Spellbook2 text changed!'
-})
+function updateSpellBook(form) {
+    addToSpellList(form.input_spells.value, form.input_effects.value);
+}
 
-var updateSpellBook3 = function(form) {
-  header3.textContent = form.input.value;
+function addToSpellList(spell, effect) {
+  let listItem = document.createElement('li');
+  listItem.appendChild(createSpellSpan(spell));
+  listItem.appendChild(createEffectSpan(effect));
+  spellList.appendChild(listItem);
+  // Output
+  inputSpellsDiv.parentNode.insertBefore(spellList.lastElementChild, inputSpellsDiv.nextSibling);
+}
+
+function createSpellSpan(spell) {
+  var span = document.createElement('span')
+  span.setAttribute('class', 'spellname')
+  span.textContent = 'SpellName: ' + spell;
+  return span;
+}
+
+function createEffectSpan(effect) {
+  var span = document.createElement('span')
+  span.setAttribute('class', 'effectname');
+  span.textContent = ', Effect: ' + effect;
+  return span;
 }
