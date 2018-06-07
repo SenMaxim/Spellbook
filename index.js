@@ -22,8 +22,6 @@ function addToSpellList(spell, effect) {
   console.log(spellList)
   JAVASCRIPT DUMB LOG NOT WORKING/MATCHING WITH HTML RESULT
   */
-  // Output
-  //inputSpellsDiv.parentNode.insertBefore(spellList.lastElementChild, inputSpellsDiv.nextSibling);
 }
 
 function createSpellSpan(spell) {
@@ -40,13 +38,6 @@ function createEffectSpan(effect) {
   return span;
 }
 
-/*
-Maybe we can use the spellNames array to keep track of current spells
-When the Delete button is clicked, remove (splice()) the element with the same name
-as the button.
-
-On every operation, update the list based on the array contents
-*/
 function createSpellButton(spellName, listItem) {
   let button = document.createElement('button');
   button.setAttribute('id', spellName)
